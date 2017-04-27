@@ -1,0 +1,40 @@
+{
+  "name": "wallet",
+  "version": "3.0.7",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "build-ios-debug": "node ./script/deploy.js ios false -b",
+    "build-ios-release": "node ./script/deploy.js ios true -b",
+    "build-android-debug": "node ./script/deploy.js android false -b",
+    "build-android-release": "node ./script/deploy.js android true -b",
+    "deploy-ios-debug": "node ./script/deploy.js ios false",
+    "deploy-ios-release": "node ./script/deploy.js ios true",
+    "deploy-android-debug": "node ./script/deploy.js android false",
+    "deploy-android-release": "node ./script/deploy.js android true",
+    "compile-script": "node ./node_modules/babel-cli/bin/babel.js ./script/src/deploy.js --out-file ./script/deploy.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/react-native": "^0.37.13",
+    "moment": "^2.18.1",
+    "numeral": "^2.0.4",
+    "react": "^16.0.0-alpha.6",
+    "react-native": "0.43.3",
+    "react-native-viewpager": "^0.2.13",
+    "react-native-goby": "^0.0.4",
+    "react-native-swiper": "^1.5.4"
+
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-jest": "17.0.2",
+    "babel-preset-react-native": "^1.9.0",
+    "jest": "17.0.3",
+    "jest-react-native": "17.0.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "typings": "core/typings/index.d.ts"
+}
